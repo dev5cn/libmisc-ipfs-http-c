@@ -1,2 +1,2 @@
 # libmisc-ipfs-http-c
-ipfs client http api cpp implementation
+[ipfs](https://github.com/ipfs) client http api cpp implementation
