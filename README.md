@@ -23,8 +23,8 @@ int main(int argc, char **argv)
 	int err;
 	string desc;
 	//
-	ipfs->filesWrite("/home/xzwdev/ipfs-hello-world0.txt", "/ipfs-hello-world0.txt", err, desc); /* ipfs files write. */
-	ipfs->filesWrite("/home/xzwdev/ipfs-hello-world1.txt", "/ipfs-hello-world1.txt", err, desc);
+	ipfs->filesWrite("/home/dev5/ipfs-hello-world0.txt", "/ipfs-hello-world0.txt", err, desc); /* ipfs files write. */
+	ipfs->filesWrite("/home/dev5/ipfs-hello-world1.txt", "/ipfs-hello-world1.txt", err, desc);
 	shared_ptr<list<shared_ptr<IpfsFileLsRspEntry>>> lis = ipfs->filesLs("/", err, desc);
 	for (auto& it : *lis)
 	{
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 	LOG_DEBUG("content: %s", ipfs->filesRead("/ipfs-hello-world0.txt", err, desc).c_str()) /* ipfs files read. */
 	ipfs->filesRm("/ipfs-hello-world0.txt", err, desc); /* ipfs files rm */
 	LOG_DEBUG("stat: %s", ipfs->filesStat("/ipfs-hello-world1.txt", err, desc)->toString().c_str()) /* ipfs files stat. */
-	shared_ptr<IpfsAddRsp> add = ipfs->add("/home/xzwdev/ipfs-hello-world0.txt", err, desc);
+	shared_ptr<IpfsAddRsp> add = ipfs->add("/home/dev5/ipfs-hello-world0.txt", err, desc);
 	LOG_DEBUG("add: %s", add->toString().c_str()) /* ipfs add. */
 	LOG_DEBUG("get: %s", ipfs->get(add->hash, err, desc).c_str()) /* ipfs get. */
 	//
