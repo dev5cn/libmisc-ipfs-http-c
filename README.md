@@ -1,6 +1,6 @@
 # libmisc-ipfs-http-c
 
-* 这是一个建立在IPFS HTTP API上的c++ client library. 已实现的功能包括:
+* 这是一个建立在[IPFS(星际文件系统)](https://github.com/ipfs) HTTP API上的c++ client library. 已实现的功能包括:
 
 	* files.ls
 	* files.read
